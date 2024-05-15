@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>
+        <div className="h-screen">
           <Navbar />
           <main>{children}</main>
         </div>

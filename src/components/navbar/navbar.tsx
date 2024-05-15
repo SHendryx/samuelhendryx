@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div className='nav fixed w-full h-[80px] flex justify-between items-center bg-[#20487b] text-gray-200'>
       <div className='px-4 z-10'>
-        <Image src={logo.src} width='50' height='50' alt='Logo' />
+        <Image src='/assets/images/logos/sh_logo_256_256.png' width='50' height='50' alt='Logo' />
       </div>
 
       {/* menu */}
