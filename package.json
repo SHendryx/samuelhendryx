@@ -1,7 +1,10 @@
 {
   "name": "samuelhendryx",
   "version": "0.1.0",
+  "description": "A personal portfolio website.",
   "private": true,
+  "author": "Samuel Hendryx",
+  "license":"BSD-3-Clause",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
