@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="h-screen">
+        <div className='h-screen bg-[#20487b] text-gray-200'>
           <Navbar />
-          <main>{children}</main>
+          <main className="min-h-[calc(100vh-80px)] border">{children}</main>
         </div>
         </body>
     </html>
