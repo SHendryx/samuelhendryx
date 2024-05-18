@@ -17,9 +17,9 @@ const Navbar = () => {
       {/* menu */}
       <div>
         <ul className='hidden md:flex px-4 text-lg'>
-          <li className='px-4'>Home</li>
-          <li className='px-4'>Resume</li>
-          <li className='px-4'>About</li>
+          <li className='px-4 border rounded-3xl border-transparent hover:border-gray-200 cursor-pointer'><a href='/'>Home</a></li>
+          <li className='px-4 border rounded-3xl border-transparent hover:border-gray-200 cursor-pointer'><a href='/resume/'>Resume</a></li>
+          <li className='px-4 border rounded-3xl border-transparent hover:border-gray-200 cursor-pointer'><a href='/about/'>About</a></li>
         </ul>
       </div>
 
