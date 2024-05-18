@@ -23,7 +23,8 @@ export default function Home() {
         {/* intro paragraph */}
         <div className='p-4'>
           <p className='max-w-[700px]'>I am a software developer who graduated in Spring of 2020.</p>
-          <p className='max-w-[700px]'>I enjoy backend development in Python, and I&apos;m currently working on developing web applications in React.</p>
+          <p className='max-w-[700px]'>I enjoy backend development in Python, Linux System Administration, and I&apos;m 
+          currently working on personal projects in React, and DevOps.</p>
         </div>
       </div>
     </div>
