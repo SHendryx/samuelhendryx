@@ -11,7 +11,7 @@ const Resume = () => {
         <h2>Software Developer</h2>
       </div>
     </div>
-    <div className='p-2'>
+    <div className='p-2 max-w-[700px]'>
       <div className='py-2'>
         <h2>HCL America</h2>
         <h3>Backend Developer</h3>
