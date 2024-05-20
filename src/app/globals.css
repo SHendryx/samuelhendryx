@@ -10,6 +10,9 @@ html {
 body {
   font-size: normal;
   font-weight: normal;
+  background-color: #20487b;
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 h1 {
@@ -63,4 +66,11 @@ p {
 .me_circle img {
   width: 80%;
   height: auto;
+}
+
+.caveat-large {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }

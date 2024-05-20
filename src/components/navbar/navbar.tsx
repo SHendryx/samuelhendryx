@@ -9,7 +9,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className='nav fixed w-full h-[80px] flex justify-between items-center bg-[#20487b] text-gray-200'>
+    <div className='nav fixed w-full h-[60px] flex justify-between items-center z-10 border'>
       <div className='px-4 z-10'>
         <Image src='/assets/images/logos/sh_logo_256_256.png' width='50' height='50' alt='Logo' />
       </div>
@@ -33,16 +33,16 @@ const Navbar = () => {
         </div>
         
         {/* hamburger */}
-        <div onClick={handleClick} className='md:hidden z-10 px-4 content-center'>
+        <div onClick={handleClick} className='md:hidden z-20 px-4 content-center'>
           {!nav ? <FaBars size={25} /> : <FaTimes size={25}/>}
         </div>
       </div>
 
       {/* mobile menu */}
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#20487b] flex flex-col justify-center items-center'}>
-          <li className='py-6 text-4xl'>Home</li>
-          <li className='py-6 text-4xl'>Resume</li>
-          <li className='py-6 text-4xl'>About</li>
+        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#20487b] flex flex-col justify-center items-center z-10'}>
+          <li className='py-6 text-4xl'><a href='/'>Home</a></li>
+          <li className='py-6 text-4xl'><a href='/resume/'>Resume</a></li>
+          <li className='py-6 text-4xl'><a href='/about/'>About</a></li>
         </ul>
     </div>
   )

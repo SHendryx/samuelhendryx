@@ -4,15 +4,15 @@ import React from 'react';
 
 const Resume = () => {
   return( 
-  <div className='min-h-[calc(100vh-85px)] h-full max-w-[1000px] mx-auto px-2 text-gray-200'>
-    <div className='flex space-x-4 p-4 items-center'>
-      <Image className='me_circle' src='/assets/images/photos/samuelhendryx.png' width='150' height='150' alt='Samuel Hendryx' />
+  <div className='min-h-[calc(100vh-60px)] h-full max-w-[1000px] flex flex-col mx-auto px-2 justify-center items-center'>
+    <div className='flex space-x-4 p-4 items-center max-w-[700px] w-full'>
+      <Image className='me-circle' src='/assets/images/photos/samuelhendryx.png' width='150' height='150' alt='Samuel Hendryx' />
       <div className='flex flex-col p-2'>
         <h1>Samuel Hendryx</h1>
         <h2>Software Developer</h2>
       </div>
     </div>
-    <div className='p-2 max-w-[700px]'>
+    <div className='p-2 max-w-[700px] w-full'>
       <div className='py-2'>
         <h2>HCL America</h2>
         <h3>Backend Developer</h3>
