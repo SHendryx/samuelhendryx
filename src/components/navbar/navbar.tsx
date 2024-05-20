@@ -9,7 +9,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className='nav fixed w-full h-[60px] flex justify-between items-center z-10 border'>
+    <div className='nav fixed w-full h-[60px] flex justify-between items-center z-10'>
       <div className='px-4 z-10'>
         <Image src='/assets/images/logos/sh_logo_256_256.png' width='50' height='50' alt='Logo' />
       </div>
