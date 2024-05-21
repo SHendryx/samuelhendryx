@@ -9,7 +9,7 @@ const About = () => {
     {/* xl sub-menu */}
     <div className='hidden xl:fixed xl:flex xl:flex-col top-[80px] xl:left-[0px] xl:w-[140px] xl:mx-0'>
       <a href='#career'>Career</a>
-      <a href='#hobbies'>Hobbies</a>
+      <a className='hidden' href='#hobbies'>Hobbies</a>
     </div>
     {/* sm sub-menu */}
     <div className='xl:hidden fixed top-[60px] left-[0px] p-1 '>
@@ -32,17 +32,17 @@ const About = () => {
       <Image className='float-end ml-4 border rounded-lg' src='/assets/images/photos/shutter-close-up.png' width='200' height='200' alt='Camera shutter close up' />
       <p>
         After highschool I started working for a Camera repair company that was the repair facility for Ricoh cameras. 
-        I began repairing cameras a year after I started, and was transfered to headquarters less than a year later. 
+        I began repairing cameras a year after I started, and was transferred to headquarters less than a year later. 
         At California Precision Service I learned how to repair Fuji and Pentax cameras, along with Tamron lenses. Once 
-        my experience and expertice grew, I was asked to manage technicians repairing Tamron lenses. I learned a great 
+        my experience and expertise grew, I was asked to manage technicians repairing Tamron lenses. I learned a great 
         deal about how to support staff by providing them with everything they needed to succeed, and how to overcome 
-        operational, and personel challenges. I even had to learn some of the least fun tasks of letting staff go if 
+        operational, and personnel challenges. I even had to learn some of the least fun tasks of letting staff go if 
         things weren&apos;t working out.
       </p>
       <p>
         During this time I noticed we were sending virtually all equipment made by Canon to the factory for repair. 
         I decided to take a lens apart to see if I could figure out what was damaged, and if I could fix it. I found 
-        that there wasn&apos;t anything outside of my expertice about this lens, and the damage was obvious and fairly 
+        that there wasn&apos;t anything outside of my expertise about this lens, and the damage was obvious and fairly 
         simple to repair. Over time, I was fixing virtually all of the Canon equipment that came into the shop. I 
         learned a lot about how each customer required service that fit their needs, how to provide this service, how 
         to navigate challenging customers, and how to focus on quality first.
@@ -55,13 +55,13 @@ const About = () => {
       <Image className='float-start mr-4 border rounded-lg' src='/assets/images/photos/pandemic-store-shelves.png' width='200' height='272' alt='store shelves during the pandemic' />
       <p>
         I graduated during the height of the global pandemic. It was a very strange and unique time for all of us. I 
-        applied to many positions in my field of Computer Science, but was unsucessfull. I worked for an Amazon 
-        devlivery station for about a year before finding employment with HCL America.
+        applied to many positions in my field of Computer Science, but was unsuccessful. I worked for an Amazon 
+        delivery station for about a year before finding employment with HCL America.
       </p>
       <p>
         My first project was for an 
-        international technology company devloping CI/CD automatted tests. I temporarily led 
-        our team during our manager&apos;s leave of abscense and onboarded new hires. After the project ended, I received 
+        international technology company developing CI/CD automated tests. I temporarily led 
+        our team during our manager&apos;s leave of absence and onboarded new hires. After the project ended, I received 
         recognition for leadership from the client.
       </p>
       <p>

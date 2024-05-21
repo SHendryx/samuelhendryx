@@ -16,7 +16,7 @@ export default function Home() {
             <div className='h-[85px] p-1 bg-gray-200 text-black place-content-center'><h1 className={caveat.className} style={{ fontSize: '48px'}}>Samuel Hendryx</h1></div>
             <div className='bg-[#1c325f]'></div>
           </div>
-          <div>
+          <div className='hidden md:flex'>
             <Image className='me-circle' src='/assets/images/photos/samuelhendryx.png' width='150' height='150' alt='Samuel Hendryx' />
           </div>
         </div>
