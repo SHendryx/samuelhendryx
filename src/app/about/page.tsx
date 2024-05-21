@@ -5,16 +5,7 @@ import {FaBars} from 'react-icons/fa';
 
 const About = () => {
   return(
-  <div className='min-h-[calc(100vh-60px)] h-full m-auto max-w-[1000px] px-2'>
-    {/* xl sub-menu */}
-    <div className='hidden xl:fixed xl:flex xl:flex-col top-[80px] xl:left-[0px] xl:w-[140px] xl:mx-0'>
-      <a href='#career'>Career</a>
-      <a className='hidden' href='#hobbies'>Hobbies</a>
-    </div>
-    {/* sm sub-menu */}
-    <div className='xl:hidden fixed top-[60px] left-[0px] p-1 '>
-    <FaBars size={20} />
-    </div>
+  <div className='min-h-[calc(100vh-60px)] h-full m-auto max-w-[1000px]'>
     <div id='career' className='mx-4'>
       <h1>Career</h1>
       <Image className='float-start mr-4 border rounded-lg' src='/assets/images/zork.png' width='200' height='200' alt='Zork I' />
@@ -26,7 +17,7 @@ const About = () => {
       </p>
       <p>
         I am also fond of tinkering with electronics and mechanical things. I made a little alarm for my toy box with 
-        a metal coat hanger, a bell, and an electro-magnet. I still love taking things apart to see how they work and 
+        a metal coat hanger, a bell, and an electro-magnet. I still enjoy taking things apart to see how they work and 
         how they were put together.
         </p>
       <Image className='float-end ml-4 border rounded-lg' src='/assets/images/photos/shutter-close-up.png' width='200' height='200' alt='Camera shutter close up' />
@@ -55,20 +46,19 @@ const About = () => {
       <Image className='float-start mr-4 border rounded-lg' src='/assets/images/photos/pandemic-store-shelves.png' width='200' height='272' alt='store shelves during the pandemic' />
       <p>
         I graduated during the height of the global pandemic. It was a very strange and unique time for all of us. I 
-        applied to many positions in my field of Computer Science, but was unsuccessful. I worked for an Amazon 
-        delivery station for about a year before finding employment with HCL America.
+        applied to many positions in my field of Computer Science, and I worked for an Amazon delivery station for 
+        about a year before finding employment with HCL America.
       </p>
       <p>
-        My first project was for an 
-        international technology company developing CI/CD automated tests. I temporarily led 
-        our team during our manager&apos;s leave of absence and onboarded new hires. After the project ended, I received 
-        recognition for leadership from the client.
+        My first project was for an international technology company developing CI/CD automated tests. I temporarily 
+        led our team during our manager&apos;s leave of absence and onboarded new hires. After the project ended, I 
+        received recognition for leadership from the client.
       </p>
       <p>
         During my second project, with a telecommunications company, I developed backend APIs which retrieved cloud 
-        instance data across all cloud providers (AWS, GCP, Azure, and OCI), an SQL database, and other in-house APIs. 
-        The APIs provided data to an application that was used by the IT team to retrieve, monitor, and report on 
-        usage, compliance, inventory, and security auditing metrics.
+        instance data across all cloud providers (AWS, GCP, Azure, and OCI), databases, and in-house APIs. My APIs 
+        provided data to an application that was used by the IT team to retrieve, monitor, and report on usage, 
+        compliance, inventory, and security auditing metrics.
       </p>
     </div>
   </div>
