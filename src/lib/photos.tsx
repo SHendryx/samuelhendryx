@@ -11,7 +11,7 @@ import photo9 from '@/assets/images/photos/artsy/tree-bark-3.jpg'
 export const photos = [
   { image: photo1, caption: 'Folsom Lake Before Sunset'},
   { image: photo2, caption: 'Folsom Lake at Sunset'},
-  { image: photo3, caption: 'Folsom at Sunrise'},
+  { image: photo3, caption: 'Sacramento from Capital Mall'},
   // { image: photos4, caption: 'Hall and Lockers'},
   // { image: photos5, caption: 'Empty Hallway'},
   // { image: photos6, caption: 'Empty Staircase'},
