@@ -4,7 +4,7 @@
   "description": "A personal portfolio website.",
   "private": true,
   "author": "Samuel Hendryx",
-  "license":"BSD-3-Clause",
+  "license": "BSD-3-Clause",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

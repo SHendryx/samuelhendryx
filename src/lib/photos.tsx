@@ -1,21 +1,21 @@
-import photos1 from '@/assets/images/photos/folsom-lake-1.jpg'
-import photos2 from '@/assets/images/photos/folsom-lake-2.jpg'
-import photos3 from '@/assets/images/photos/folsom-sunrise.jpg'
-import photos4 from '@/assets/images/photos/artsy/hall-and-lockers.jpg'
-import photos5 from '@/assets/images/photos/artsy/empty-hallway.jpg'
-import photos6 from '@/assets/images/photos/artsy/staircase.jpg'
-import photos7 from '@/assets/images/photos/artsy/tree-bark-1.jpg'
-import photos8 from '@/assets/images/photos/artsy/tree-bark-2.jpg'
-import photos9 from '@/assets/images/photos/artsy/tree-bark-3.jpg'
+import photo1 from '@/assets/images/photos/folsom-lake-1.jpg'
+import photo2 from '@/assets/images/photos/folsom-lake-2.jpg'
+import photo3 from '@/assets/images/photos/sacramento.jpg'
+import photo4 from '@/assets/images/photos/artsy/hall-and-lockers.jpg'
+import photo5 from '@/assets/images/photos/artsy/empty-hallway.jpg'
+import photo6 from '@/assets/images/photos/artsy/staircase.jpg'
+import photo7 from '@/assets/images/photos/artsy/tree-bark-1.jpg'
+import photo8 from '@/assets/images/photos/artsy/tree-bark-2.jpg'
+import photo9 from '@/assets/images/photos/artsy/tree-bark-3.jpg'
 
 export const photos = [
-  { src: photos1, alt: 'Folsom lake before sunset'},
-  { src: photos2, alt: 'Folsom lake at sunset'},
-  { src: photos3, alt: 'Folsom at sunrise'},
-  { src: photos4, alt: 'Hall and lockers'},
-  { src: photos5, alt: 'Empty Hallway'},
-  { src: photos6, alt: 'Empty Staircase'},
-  { src: photos7, alt: 'Tree bark 1/3'},
-  { src: photos8, alt: 'Tree bark 2/3'},
-  { src: photos9, alt: 'Tree back 3/3'},
+  { image: photo1, caption: 'Folsom Lake Before Sunset'},
+  { image: photo2, caption: 'Folsom Lake at Sunset'},
+  { image: photo3, caption: 'Folsom at Sunrise'},
+  // { image: photos4, caption: 'Hall and Lockers'},
+  // { image: photos5, caption: 'Empty Hallway'},
+  // { image: photos6, caption: 'Empty Staircase'},
+  // { image: photos7, caption: 'Tree Bark 1/3'},
+  // { image: photos8, caption: 'Tree Bark 2/3'},
+  // { image: photos9, caption: 'Tree Bark 3/3'},
 ]
