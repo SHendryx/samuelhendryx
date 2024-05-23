@@ -8,7 +8,7 @@ html {
   scroll-padding-top: 81px;
 }
 body {
-  font-size: normal;
+  font-size: medium;
   font-weight: normal;
   background-color: #20487b;
   --tw-text-opacity: 1;
@@ -31,7 +31,7 @@ h3 {
 }
 
 p {
-  font-size: normal;
+  font-size: medium;
   font-weight: normal;
   margin-top: 4px;
   margin-bottom: 12px;

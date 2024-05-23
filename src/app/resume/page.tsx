@@ -42,10 +42,10 @@ const Resume = () => {
         <h3>Subcontract Manager / Lead Technician</h3>
         <p>Managed 6 lens optical repair technicians. Developed technical manuals for complex 
         adjustment equipment. Trained technicians on lens optical repair and adjustment. Reduced reworks by 10%. 
-        Increased production by 20%.</p>
+        Increased production by 30%.</p>
         <h3>Lead Canon Repair Technician</h3>
         <p>Taught myself how to repair Canon lenses and digital SLRs. Increased in-house 
-        repairs by 400%. Increased profit by 30%. Decreased turn around time by 30%.</p>
+        repairs by 20%. Increased profit by 25%. Decreased turn around time by 30%.</p>
       </div>
     </div>
   </div>
