@@ -20,6 +20,7 @@ const Navbar = () => {
           <li className='px-4 border rounded-3xl border-transparent hover:border-gray-200 cursor-pointer'><a href='/'>Home</a></li>
           <li className='px-4 border rounded-3xl border-transparent hover:border-gray-200 cursor-pointer'><a href='/resume/'>Resume</a></li>
           <li className='px-4 border rounded-3xl border-transparent hover:border-gray-200 cursor-pointer'><a href='/about/'>About</a></li>
+          <li className='px-4 border rounded-3xl border-transparent hover:border-gray-200 cursor-pointer'><a href='/hobbies/'>Hobbies</a></li>
         </ul>
       </div>
 
@@ -43,6 +44,7 @@ const Navbar = () => {
           <li className='py-6 text-4xl'><a href='/'>Home</a></li>
           <li className='py-6 text-4xl'><a href='/resume/'>Resume</a></li>
           <li className='py-6 text-4xl'><a href='/about/'>About</a></li>
+          <li className='py-6 text-4xl'><a href='/hobbies/'>Hobbies</a></li>
         </ul>
     </div>
   )
