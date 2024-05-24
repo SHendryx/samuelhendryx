@@ -42,10 +42,10 @@ const Navbar = () => {
 
       {/* mobile menu */}
         <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#20487b] flex flex-col justify-center items-center z-10'}>
-          <li className='py-6 text-4xl'><Link href='/'>Home</Link></li>
-          <li className='py-6 text-4xl'><Link href='/resume/'>Resume</Link></li>
-          <li className='py-6 text-4xl'><Link href='/about/'>About</Link></li>
-          <li className='py-6 text-4xl'><Link href='/hobbies/'>Hobbies</Link></li>
+          <li className='py-6 text-4xl' onClick={handleClick}><Link href='/'>Home</Link></li>
+          <li className='py-6 text-4xl' onClick={handleClick}><Link href='/resume/'>Resume</Link></li>
+          <li className='py-6 text-4xl' onClick={handleClick}><Link href='/about/'>About</Link></li>
+          <li className='py-6 text-4xl' onClick={handleClick}><Link href='/hobbies/'>Hobbies</Link></li>
         </ul>
     </div>
   )
