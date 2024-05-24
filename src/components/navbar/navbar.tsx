@@ -29,8 +29,8 @@ const Navbar = () => {
         {/* social icons */}
         <div className='w-[110px]'>
           <ul className='flex'>
-            <li className='px-2'><Link className='flex items-center' href='https://github.com/SHendryx'><FaGithub size={30}/></Link></li>
-            <li className='px-2'><Link className='flex items-center' href='https://www.linkedin.com/in/samuel-hendryx-34605a151/'><FaLinkedin size={30}/></Link></li>
+            <li className='px-2'><Link className='flex items-center' target='_blank' href='https://github.com/SHendryx'><FaGithub size={30}/></Link></li>
+            <li className='px-2'><Link className='flex items-center' target='_blank' href='https://www.linkedin.com/in/samuel-hendryx-34605a151/'><FaLinkedin size={30}/></Link></li>
           </ul>
         </div>
         
