@@ -19,7 +19,7 @@ const SlideshowWheeling = () => {
   return (
     <div>
       <div className="flex w-full justify-between items-center bg-[#11223f] rounded-2xl object-contain">
-        <div><button className='previous' onClick={handlePrevious}><FaAngleLeft size={30} /></button></div>
+        <div><button className='prev' onClick={handlePrevious}><FaAngleLeft size={30} /></button></div>
         <div className="flex max-w-full max-h-full w-full h-[200px] md:h-[300px] lg:h-[450px] object-contain justify-center">
           <Image className='fade max-h-full object-contain' src={photos[index].image.src} alt={photos[index].caption} width={photos[index].image.width} height={photos[index].image.height} />
         </div>
