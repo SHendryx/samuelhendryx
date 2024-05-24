@@ -1,7 +1,7 @@
 // @/about/
 import React from 'react';
 import Image from 'next/image';
-import {FaBars} from 'react-icons/fa';
+import Link from 'next/link';
 
 const About = () => {
   return(
@@ -12,7 +12,7 @@ const About = () => {
       <p>
         I grew up in a small rural town just south of Placerville CA. As a young boy I fell in love with computers and 
         video games, and was very fond of a text-based adventure game named&nbsp;
-        <a href='https://store.steampowered.com/app/570580/Zork_Anthology/' target='_blank' rel='noopener noreferrer'><u>Zork</u></a>. My uncle would read the 
+        <Link href='https://store.steampowered.com/app/570580/Zork_Anthology/' target='_blank' rel='noopener noreferrer'><u>Zork</u></Link>. My uncle would read the 
         descriptions of the rooms to us and ask us what we wanted to do and then would enter our commands into the prompt.
       </p>
       <p>
