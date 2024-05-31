@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
-import { photos } from "./wheeling";
+import { photos } from "@/lib/wheeling";
 import Image from "next/image";
 
 const SlideshowWheeling = () => {

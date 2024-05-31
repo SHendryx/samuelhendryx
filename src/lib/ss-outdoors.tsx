@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
-import { photos } from "./outdoors";
+import { photos } from "@/lib/outdoors";
 import Image from "next/image";
 
 const SlideshowOutdoors = () => {
