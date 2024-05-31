@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
-import { photos } from "./photos";
+import { photos } from "@/lib/photos";
 import Image from "next/image";
 
 const SlideshowPhotography = () => {
