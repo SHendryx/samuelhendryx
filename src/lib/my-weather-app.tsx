@@ -99,22 +99,34 @@ const MyWeatherApp: React.FC = () => {
   }
 
   return (
-    <div className="weather">
-      <p>{userCity}, {userState}</p>
-      <p>Latitude: {userLatitude}</p>
-      <p>Longitude: {userLongitude}</p>
-      <p>Elevation: {userElevation?.value}{userElevation?.unitCode.replace("wmoUnit:", "")}</p>
-      <div className="flex flex-row justify">
+    <div className="weather min-h-[calc(100vh-60px)] h-full m-auto p-10 max-w-[850px]">
+      <div className="w-full justify-center text-center">
+        <h3>{userCity}, {userState}</h3>
+      </div>
+      <div className="w-full justify-center text-center">
+        {userLatitude}, {userLongitude}
+      </div>
+      <div className="w-full justify-center text-center">Elevation: {userElevation?.value} {userElevation?.unitCode.replace("wmoUnit:", "")}</div>
+      
+      <div className="grid-cols-2 w-full border">
         {forecast.map(period => (
-          <div>
-            <img key={period.number} src={period.icon} />
-            <ul>
-              <li>{period.temperature}&deg;{period.temperatureUnit}</li>
-              <li>{period.dewpoint.value?.toFixed(2)}&deg;{period.dewpoint.unitCode.replace('wmoUnit:deg', '')}</li>
-              <li>Hum: {period.relativeHumidity.value}%</li>
-              <li>Wind: {period.windSpeed}{period.windDirection}</li>
-              <li>{period.detailedForecast}</li>
-            </ul>
+          <div className="border">
+          <div className="flex w-full border" key={`${period.number}div`}>
+            <div>
+              <img className="max-h-[100px] max-w-[100px]" key={`${period.number}icon`} src={period.icon} />
+            </div>
+            <div className="w-full border">
+              <ul key={`${period.number}list`}>
+                <li key={`${period.number}temp`}>{period.temperature}&deg;{period.temperatureUnit}</li>
+                <li key={`${period.number}dew`}>{period.dewpoint.value?.toFixed(2)}&deg;{period.dewpoint.unitCode.replace('wmoUnit:deg', '')}</li>
+                <li key={`${period.number}hum`}>Hum: {period.relativeHumidity.value}%</li>
+                <li key={`${period.number}wind`}>Wind: {period.windSpeed} {period.windDirection}</li>
+              </ul>
+            </div>
+          </div>
+            <div>
+              <p key={`${period.number}detail`}>{period.detailedForecast}</p>
+            </div>
           </div>
         ))}
       </div>
