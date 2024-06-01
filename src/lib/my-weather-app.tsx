@@ -15,25 +15,44 @@ const MyWeatherApp: React.FC = () => {
   const [userLongitude, setUserLongitude] = useState<number | null>(null);
   const [userCity, setUserCity] = useState<string>();
   const [userState, setUserState] = useState<string>();
-  const [weeklyForecastURL, setWeeklyForecastURL] = useState<string>();
   const [userElevation, setUserElevation] = useState<Measurement>();
   const [forecast, setForecast] = useState<Period[]>([]);
   
   useEffect(() => {
     const fetchData = async () => {
-      await fetchGeoLocation();
+      if (!userLatitude || !userLongitude){
+        await fetchGeoLocation();
+      }
       await fetchForecast();
+
+      async function fetchForecast() {
+        if (!userLatitude || !userLongitude){
+          return
+        }
+        console.log(`GeoLocation: ${userLatitude}, ${userLongitude}`)
+        let pointsURL = `https://api.weather.gov/points/${userLatitude},${userLongitude}`;
+        const pointsDataReq = fetch(pointsURL).then(res => res.json())
+    
+        pointsDataReq.then(pointsData => {
+          setUserCity(pointsData.properties.relativeLocation.properties.city);
+          setUserState(pointsData.properties.relativeLocation.properties.state);
+          console.log(`Weekly Forecast URL: ${pointsData.properties.forecast}`);
+          console.log(pointsData);
+    
+          return fetch(pointsData.properties.forecast);
+        })
+        .then(res => res.json())
+        .then(weeklyForecastData => {
+          setUserElevation(weeklyForecastData.properties.elevation);
+          let forecast = weeklyForecastData.properties.periods;
+          setForecast(forecast);
+          console.log(weeklyForecastData);
+        })
+        .catch(reqErr => console.error(reqErr));
+      }
     }
     fetchData();
   }, [userLatitude, userLongitude]);
-
-  // useEffect(() => {
-  //   const fetchForecast = async () => {
-  //     // Fetch data from NOAA Forecast API
-  //     await fetchWeeklyForecast();
-  //   }
-  //   fetchForecast();
-  // }, [weeklyForecastURL, fetchWeeklyForecast]);
   
   async function fetchGeoLocation() {
     // Get GeoLocation by GPS, or IP Address.
@@ -50,66 +69,6 @@ const MyWeatherApp: React.FC = () => {
       console.log("Note: Geolocation is available only in secure contexts.");
     }
   }
-
-  async function fetchForecast() {
-    if (!userLatitude || !userLongitude){
-      return
-    }
-    console.log(`GeoLocation: ${userLatitude}, ${userLongitude}`)
-    let pointsURL = `https://api.weather.gov/points/${userLatitude},${userLongitude}`;
-    const pointsDataReq = fetch(pointsURL).then(res => res.json())
-
-    pointsDataReq.then(pointsData => {
-      setUserCity(pointsData.properties.relativeLocation.properties.city);
-      setUserState(pointsData.properties.relativeLocation.properties.state);
-      setWeeklyForecastURL(pointsData.properties.forecast);
-      console.log(`Weekly Forecast URL: ${pointsData.properties.forecast}`);
-      console.log(`Stored Weekly Forecast URL: ${weeklyForecastURL}`);
-      console.log(pointsData);
-
-      return fetch(pointsData.properties.forecast);
-    })
-    .then(res => res.json())
-    .then(weeklyForecastData => {
-      setUserElevation(weeklyForecastData.properties.elevation);
-      let forecast = weeklyForecastData.properties.periods;
-      setForecast(forecast);
-      console.log(weeklyForecastData);
-    })
-    .catch(reqErr => console.error(reqErr));
-  }
-
-  // async function fetchWeeklyForecast() {
-  //   if (!weeklyForecastURL) {
-  //     console.log("NO WEEKLY FORECAST URL...")
-  //     return
-  //   }
-  //   console.log("WE HAVE A WEEKLY FORECAST URL!!!")
-  //   return callAPI(weeklyForecastURL).then(data =>
-  //     storeWeeklyForecastData(data));
-  // }
-
-  // function storePointsData(pointsData: Points) {
-  //   setUserCity(pointsData.properties.relativeLocation.properties.city);
-  //   setUserState(pointsData.properties.relativeLocation.properties.state);
-  //   setWeeklyForecastURL(pointsData.properties.forecast);
-  //   console.log(`Weekly Forecast URL: ${pointsData.properties.forecast}`);
-  //   console.log(`Stored Weekly Forecast URL: ${weeklyForecastURL}`)
-  //   console.log(pointsData);
-  // }
-
-  // function storeWeeklyForecastData(weeklyForecastData: WeeklyForecast) {
-  //   setUserElevation(weeklyForecastData.properties.elevation);
-  //   let forecast = weeklyForecastData.properties.periods;
-  //   setForecast(forecast);
-  //   console.log(weeklyForecastData);
-  // }
-
-  // async function callAPI(url: string, options={}) {
-  //   return fetch(url, options).then(res => {
-  //     return res.json();
-  //   });
-  // }
 
   return (
     <div className="weather min-h-[calc(100vh-60px)] h-full m-auto p-10 max-w-[850px]">
