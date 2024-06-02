@@ -74,7 +74,7 @@ const MyWeatherApp: React.FC = () => {
     return (
       <div className="weather min-h-[calc(100vh-60px)] h-full m-auto p-4 max-w-[850px] w-full justify-center text-center">
       <p>This app uses your GeoLocation to fetch a weekly weather forecast from NOAA APIs.</p>
-      <p>No data is stored. It's only used to fetch weather forecasts for your location.</p>
+      <p>No data is stored. It&apos;s only used to fetch weather forecasts for your location.</p>
       </div>
   )}
   return (
