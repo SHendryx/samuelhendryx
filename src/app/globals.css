@@ -37,11 +37,11 @@ p {
   margin-bottom: 12px;
 }
 
-p.weather {
+.weather-text {
   font-size: small;
   font-weight: normal;
   margin-top: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .nav {
