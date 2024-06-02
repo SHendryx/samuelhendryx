@@ -44,6 +44,15 @@ p {
   margin-bottom: 4px;
 }
 
+.forecast-window {
+  padding-inline-start: calc((100vw - 300px) / 2);
+  padding-inline-end: calc((100vw - 300px) / 2);
+  @media (min-width: 768px) {
+    padding-inline-start: unset;
+    padding-inline-end: unset;  
+  }
+}
+
 .nav {
   position: sticky;
   top: 0px;
