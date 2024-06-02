@@ -87,9 +87,9 @@ const MyWeatherApp: React.FC = () => {
       </div>
       <div className="w-full justify-center text-center">Elevation: {userElevation?.value} {userElevation?.unitCode.replace("wmoUnit:", "")}</div>
       
-      <div className="relative grid grid-flow-col grid-rows-2 overflow-auto snap-x md:grid-flow-row md:grid-cols-2 gap-4">
+      <div className="forecast-window grid grid-flow-col grid-rows-2 overflow-auto snap-x md:grid-flow-row md:grid-cols-2 gap-4">
         {forecast.map(period => (
-          <div className="relative w-[290px] h-[200px] md:justify-self-center rounded-2xl p-2 snap-center snap-mandatory border" key={`${period.number}-outer-div`}>
+          <div className="w-[300px] h-[200px] md:justify-self-center rounded-2xl p-2 snap-center snap-mandatory border" key={`${period.number}-outer-div`}>
             <div>
             {period.name}
             </div>
