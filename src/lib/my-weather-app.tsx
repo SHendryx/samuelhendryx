@@ -70,8 +70,15 @@ const MyWeatherApp: React.FC = () => {
     }
   }
 
+  if (!userLatitude || !userLongitude) {
+    return (
+      <div className="weather min-h-[calc(100vh-60px)] h-full m-auto p-4 max-w-[850px] w-full justify-center text-center">
+      <p>This app uses your GeoLocation to fetch a weekly weather forecast from NOAA APIs.</p>
+      <p>No data is stored. It's only used to fetch weather forecasts for your location.</p>
+      </div>
+  )}
   return (
-    <div className="weather min-h-[calc(100vh-60px)] h-full m-auto p-10 max-w-[850px]">
+    <div className="weather min-h-[calc(100vh-60px)] h-full m-auto p-4 max-w-[850px] overflow-clip">
       <div className="w-full justify-center text-center">
         <h3>{userCity}, {userState}</h3>
       </div>
@@ -80,24 +87,27 @@ const MyWeatherApp: React.FC = () => {
       </div>
       <div className="w-full justify-center text-center">Elevation: {userElevation?.value} {userElevation?.unitCode.replace("wmoUnit:", "")}</div>
       
-      <div className="grid-cols-2 w-full">
+      <div className="grid grid-flow-col grid-rows-2 overflow-auto snap-x md:grid-flow-row md:grid-cols-2 gap-4">
         {forecast.map(period => (
-          <div className="" key={`${period.number}-outer-div`}>
-          <div className="flex w-full" key={`${period.number}-inner-div`}>
-            <div>
-              <Image className="max-h-[100px] max-w-[100px]" src={period.icon} key={`${period.number}-icon`} width={100} height={100} alt="Forecast Icon" />
+          <div className="border w-[300px] h-[200px] md:justify-self-center rounded-2xl p-2 snap-center" key={`${period.number}-outer-div`}>
+            <div className="">
+            {period.name}
             </div>
-            <div className="w-full">
-              <ul key={`${period.number}-list`}>
-                <li key={`${period.number}-temp`}>{period.temperature}&deg;{period.temperatureUnit}</li>
-                <li key={`${period.number}-dew`}>{period.dewpoint.value?.toFixed(2)}&deg;{period.dewpoint.unitCode.replace('wmoUnit:deg', '')}</li>
-                <li key={`${period.number}-hum`}>Hum: {period.relativeHumidity.value}%</li>
-                <li key={`${period.number}-wind`}>Wind: {period.windSpeed} {period.windDirection}</li>
-              </ul>
+            <div className="flex w-full max-h-[100px]" key={`${period.number}-inner-div`}>
+              <div className="">
+                <Image className="max-h-[100px] max-w-[100px]" src={period.icon} key={`${period.number}-icon`} width={100} height={100} alt="Forecast Icon" />
+              </div>
+              <div className="w-full px-2">
+                <ul key={`${period.number}-list`}>
+                  <li key={`${period.number}-temp`}>Temp: {period.temperature}&deg;{period.temperatureUnit}</li>
+                  <li key={`${period.number}-dew`}>Dewpoint: {period.dewpoint.value?.toFixed(2)}&deg;{period.dewpoint.unitCode.replace('wmoUnit:deg', '')}</li>
+                  <li key={`${period.number}-hum`}>Humidity: {period.relativeHumidity.value}%</li>
+                  <li key={`${period.number}-wind`}>Wind: {period.windSpeed} {period.windDirection}</li>
+                </ul>
+              </div>
             </div>
-          </div>
-            <div>
-              <p key={`${period.number}-detail`}>{period.detailedForecast}</p>
+            <div className="">
+              <p className="weather" key={`${period.number}-detail`}>{period.detailedForecast}</p>
             </div>
           </div>
         ))}
