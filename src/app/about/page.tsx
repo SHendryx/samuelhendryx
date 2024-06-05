@@ -73,7 +73,7 @@ const About = () => {
       </p>
       <Image className='float-start mr-4 border rounded-lg' src='/assets/images/photos/family/our_wedding.jpg' width='200' height='134' alt='Ryan and Me' />
       <p>
-        Despite us both sharing that neither of us were looking for a seriously relationship, let alone marriage, we 
+        Despite us both stating that neither of us were looking for a serious relationship, let alone marriage, we 
         tied the knot in the summer of 2023. We decided on a beautiful private ceremony with our immediate families. We 
         bought a house in the fall of 2023, and we couldn&apos;t be happier or have ever planned that our lives would 
         have turned out as amazing as they have.
