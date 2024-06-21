@@ -44,6 +44,13 @@ p {
   margin-bottom: 4px;
 }
 
+.weather-text-temp {
+  font-size: xx-large;
+  font-weight: normal;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 .forecast-window {
   padding-inline-start: calc((100vw - 300px) / 2);
   padding-inline-end: calc((100vw - 300px) / 2);
