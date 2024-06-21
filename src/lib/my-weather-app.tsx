@@ -95,13 +95,13 @@ const MyWeatherApp: React.FC = () => {
             </div>
             <div className="flex w-full max-h-[100px]" key={`${period.number}-inner-div`}>
               <div>
-                <Image className="max-h-[100px] max-w-[100px]" src={period.icon} key={`${period.number}-icon`} width={100} height={100} alt="Forecast Icon" />
+                <Image className="max-h-[100px] max-w-[100px]" src={`https://api.weather.gov${period.icon}`} key={`${period.number}-icon`} width={100} height={100} alt="Forecast Icon" />
               </div>
               <div className="w-full px-2">
                 <ul key={`${period.number}-list`}>
-                  <li key={`${period.number}-temp`} className="weather-text">Temp: {period.temperature}&deg;{period.temperatureUnit}</li>
-                  <li key={`${period.number}-dew`} className="weather-text">Dewpoint: {period.dewpoint.value?.toFixed(2)}&deg;{period.dewpoint.unitCode.replace('wmoUnit:deg', '')}</li>
-                  <li key={`${period.number}-hum`} className="weather-text">Humidity: {period.relativeHumidity.value}%</li>
+                  <li key={`${period.number}-temp`} className="weather-text-temp">{period.temperature}&deg;{period.temperatureUnit}</li>
+                  {/* <li key={`${period.number}-dew`} className="weather-text">Dewpoint: {period.dewpoint.value?.toFixed(2)}&deg;{period.dewpoint.unitCode.replace('wmoUnit:deg', '')}</li> */}
+                  {/* <li key={`${period.number}-hum`} className="weather-text">Humidity: {period.relativeHumidity.value}%</li> */}
                   <li key={`${period.number}-wind`} className="weather-text">Wind: {period.windSpeed} {period.windDirection}</li>
                 </ul>
               </div>
